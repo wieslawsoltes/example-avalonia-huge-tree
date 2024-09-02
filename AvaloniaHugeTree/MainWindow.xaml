@@ -17,9 +17,6 @@
             <TextBlock Text="{Binding TotalItems}"/>
         </StackPanel>
         <Border BorderThickness="1" BorderBrush="Black">
-            <ScrollViewer
-                          HorizontalScrollBarVisibility="Auto"
-                          VerticalScrollBarVisibility="Auto">
                 <ListBox ItemsSource="{Binding TreeRoot.VisibleChildren}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -40,7 +37,6 @@
                         </Style>
                     </ListBox.Styles>
                 </ListBox>
-            </ScrollViewer>
         </Border>
     </DockPanel>
 </Window>
