@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Avalonia.Collections;
 using Avalonia.Threading;
-using JetBrains.Annotations;
 
 namespace AvaloniaHugeTree
 {
