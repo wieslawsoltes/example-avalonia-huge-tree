@@ -17,7 +17,8 @@
             <TextBlock Text="{Binding TotalItems}"/>
         </StackPanel>
         <Border BorderThickness="1" BorderBrush="Black">
-                <ListBox ItemsSource="{Binding TreeRoot.VisibleChildren}">
+                <ListBox ItemsSource="{Binding TreeRoot.VisibleChildren}"
+                         AutoScrollToSelectedItem="False">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border Padding="{Binding Level, Converter={StaticResource PaddingConverter}}">
