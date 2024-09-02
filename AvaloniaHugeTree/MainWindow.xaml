@@ -20,18 +20,24 @@
             <ScrollViewer
                           HorizontalScrollBarVisibility="Auto"
                           VerticalScrollBarVisibility="Auto">
-                <ItemsRepeater ItemsSource="{Binding TreeRoot.VisibleChildren}">
-                    <ItemsRepeater.ItemTemplate>
+                <ListBox ItemsSource="{Binding TreeRoot.VisibleChildren}">
+                    <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border Padding="{Binding Level, Converter={StaticResource PaddingConverter}}">
                                 <StackPanel Orientation="Horizontal">
-                                    <CheckBox IsChecked="{Binding IsExpanded}"/>
+                                    <CheckBox IsChecked="{Binding IsExpanded}"
+                                              MinHeight="0"/>
                                     <TextBlock Focusable="True" Text="{Binding Name}" Margin="5 0 0 0" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
-                    </ItemsRepeater.ItemTemplate>
-                </ItemsRepeater>
+                    </ListBox.ItemTemplate>
+                    <ListBox.Styles>
+                        <Style Selector="ListBoxItem">
+                            <Setter Property="Padding" Value="0" />
+                        </Style>
+                    </ListBox.Styles>
+                </ListBox>
             </ScrollViewer>
         </Border>
     </DockPanel>
